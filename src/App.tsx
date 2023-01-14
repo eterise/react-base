@@ -1,11 +1,18 @@
-import React from "react";
-
-const google = "https//t.me/eterise"
+import { Route, Routes } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
+import { AboutPage } from "./pages/AboutPage";
+import { ProductPage } from "./pages/ProductsPage";
 
 function App() {
-  return ( 
-    <h1>hi</h1>
-  )
+  return (
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<ProductPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
